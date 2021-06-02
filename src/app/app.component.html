@@ -1,1 +1,9 @@
-<div>{{title}}</div>
+
+
+<ul>
+  <li><a routerLink="users">users</a></li>
+  <li><a [routerLink]="['posts']">posts</a></li> <!-- тут складові можна писати через кому*/ -->
+  <li><a routerLink="comments">comments</a></li>
+
+</ul>
+<router-outlet></router-outlet>

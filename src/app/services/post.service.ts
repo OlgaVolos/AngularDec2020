@@ -20,7 +20,7 @@ export class PostService {
 
 
   getPostsByUsersID(userId: number) :Observable<Post[]> {
-    return this.httpClient.get<Post[]>(this.url + 'posts?usersId=' + userId)
+    return this.httpClient.get<Post[]>(this.url + 'posts?userId=' + userId)
   }
 }
 

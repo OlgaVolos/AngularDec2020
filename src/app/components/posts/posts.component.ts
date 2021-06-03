@@ -17,7 +17,8 @@ export class PostsComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
-    this.postService.getPostsByUsersID(this.userId).subscribe(value => this.posts = value)
+    this.postService.getPostsByUsersID(this.userId)
+      .subscribe(value => this.posts = value)
 
 
 

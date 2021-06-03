@@ -1,6 +1,2 @@
-<div>
-  {{user.id}}
-  {{user.name}}
-  {{user.username}}
-  {{user.email}}
-</div>
+<h1>{{user.id}}--{{user.name}}--{{user.username}}</h1>
+<app-posts [userId] = 'user.id'></app-posts>

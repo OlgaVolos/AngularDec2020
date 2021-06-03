@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Post} from "../../models/post";
 import {PostService} from "../../services/post.service";
-import {User} from "../../models/user";
+
 
 
 @Component({
@@ -10,10 +10,9 @@ import {User} from "../../models/user";
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-
-  posts: Post[];
- post: Post;
+@Input()
   userId: number;
+  posts: Post[];
 
   constructor(private postService: PostService) { }
 

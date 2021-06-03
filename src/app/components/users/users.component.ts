@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../../models/user";
 import {UserService} from "../../services/user.service";
-import {Post} from "../../models/post";
+
 
 @Component({
   selector: 'app-users',
@@ -11,7 +11,7 @@ import {Post} from "../../models/post";
 export class UsersComponent implements OnInit {
 
   users: User[];
-  posts: Post[];
+
 
   constructor(private userService: UserService) { }
 

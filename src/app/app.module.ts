@@ -16,6 +16,8 @@ import {PostActivatorService} from "../services/post-activator.service";
 import { CommentsComponent } from './components/comments/comments.component';
 import {CommentsResolveService} from "../services/comments-resolve.service";
 import { CommentComponent } from './components/comment/comment.component';
+import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
+import {CommentDetailsResolveService} from "../services/comment-details-resolve.service";
 
 
 
@@ -31,7 +33,8 @@ let routes: Routes = [
 
   }, /* render into app*/
   {path: 'posts/:id', component: PostDetailsComponent}, /* render into app*/
-  {path: 'comments', component: CommentsComponent, resolve: {xxx: CommentsResolveService}}
+  {path: 'comments', component: CommentsComponent, resolve: {xxx: CommentsResolveService}},
+  {path: 'comments/id', component: CommentDetailsComponent, resolve: {details: CommentDetailsResolveService} }
 ];
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ let routes: Routes = [
     PostDetailsComponent,
     CommentsComponent,
     CommentComponent,
+    CommentDetailsComponent,
 
   ],
   imports: [

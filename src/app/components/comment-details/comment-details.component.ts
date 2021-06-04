@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component,  OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Comment} from "../../../models/comment";
 @Component({
@@ -7,14 +7,14 @@ import {Comment} from "../../../models/comment";
   styleUrls: ['./comment-details.component.css']
 })
 export class CommentDetailsComponent implements OnInit {
-  @Input()
-  fulComment: Comment;
+
+  fullComment: Comment;
 
   constructor(private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.data.subscribe(value => console.log(value.details))
-  }
+      }
 
   ngOnInit(): void {
+    this.fullComment = this.activatedRoute.snapshot.data['id']
   }
 
 }

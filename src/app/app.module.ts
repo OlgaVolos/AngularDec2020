@@ -34,7 +34,7 @@ let routes: Routes = [
   }, /* render into app*/
   {path: 'posts/:id', component: PostDetailsComponent}, /* render into app*/
   {path: 'comments', component: CommentsComponent, resolve: {xxx: CommentsResolveService}},
-  {path: 'comments/id', component: CommentDetailsComponent, resolve: {details: CommentDetailsResolveService} }
+  {path: 'comments/:id', component: CommentDetailsComponent, resolve: {details: CommentsResolveService} }
 ];
 @NgModule({
   declarations: [
@@ -55,7 +55,7 @@ let routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CommentsResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

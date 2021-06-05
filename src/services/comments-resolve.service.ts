@@ -13,7 +13,10 @@ private url = 'https://jsonplaceholder.typicode.com/comments'
   constructor(private httpClient: HttpClient ) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Comment[]> | Promise<Comment[]> | Comment[] {
-    return this.httpClient.get<Comment[]>(this.url);
+    console.log(ActivatedRouteSnapshot)
+    console.log(RouterStateSnapshot)
+
+  return this.httpClient.get<Comment[]>(this.url);
   }
 
 

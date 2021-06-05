@@ -13,13 +13,11 @@ import {PostComponent} from './components/post/post.component';
 import {PostDetailsComponent} from "./components/post-details/post-details.component";
 import {UsersDeactivatorService} from "../services/users-deactivator.service";
 import {PostActivatorService} from "../services/post-activator.service";
-import { CommentsComponent } from './components/comments/comments.component';
+import {CommentsComponent} from './components/comments/comments.component';
 import {CommentsResolveService} from "../services/comments-resolve.service";
-import { CommentComponent } from './components/comment/comment.component';
-import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
-import {CommentDetailsResolveService} from "../services/comment-details-resolve.service";
-
-
+import {CommentComponent} from './components/comment/comment.component';
+import {CommentDetailsComponent} from './components/comment-details/comment-details.component';
+import {CommentService} from "../services/comment.service";
 
 let routes: Routes = [
   {path: 'users',
@@ -34,7 +32,7 @@ let routes: Routes = [
   }, /* render into app*/
   {path: 'posts/:id', component: PostDetailsComponent}, /* render into app*/
   {path: 'comments', component: CommentsComponent, resolve: {xxx: CommentsResolveService}},
-  {path: 'comments/:id', component: CommentDetailsComponent, resolve: {ххх: CommentsResolveService} }
+  {path: 'comments/:id', component: CommentDetailsComponent}
 ];
 @NgModule({
   declarations: [

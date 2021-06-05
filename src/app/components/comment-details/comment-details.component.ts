@@ -13,7 +13,7 @@ export class CommentDetailsComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private commentService: CommentService) {
     this.activatedRoute.params.subscribe(value => {
-      console.log(value.id)
+      console.log(value.id);
 
     this.commentService.getComment(value.id).subscribe(comment => this.fullComment = comment)
       })}
@@ -23,3 +23,7 @@ export class CommentDetailsComponent implements OnInit {
   }
 
 }
+// constructor(private activatedRoute: ActivatedRoute, private commentService: CommentService) {
+//   this.activatedRoute.params.subscribe(value => {
+//     this.id = +value.id;
+//     this.commentService.getComment(this.id).subscribe(comment => this.fullUser = comment  )

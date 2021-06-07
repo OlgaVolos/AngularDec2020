@@ -13,10 +13,15 @@ export class UserDetailsComponent implements OnInit {
 id: number;
 fullUser: IUser;
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
-    this.activatedRoute.params.subscribe(value => {
+    this.activatedRoute.params.subscribe(value =>
+    { console.log(history.state)
       this.id = +value.id;
+
       this.userService.getUser(this.id).subscribe(singleUser => this.fullUser = singleUser  )
-    })}
+    }
+    )
+
+  }
 
   ngOnInit(): void {
      }

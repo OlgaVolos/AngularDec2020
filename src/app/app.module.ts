@@ -4,12 +4,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './components/app/app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
-import { HomeComponent } from './components/home/home.component';
+import {HomeComponent} from './components/home/home.component';
 
 
 let routes: Routes = [
   {path: 'home', component: HomeComponent  },
   {path: 'users', loadChildren: () => import('./modules/user/user.module').then(m=>m.UserModule)},
+  {path: 'posts', loadChildren: () => import('./modules/post/post.module').then(m=>m.PostModule)},
+
 
 
 ];
@@ -18,6 +20,7 @@ let routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,

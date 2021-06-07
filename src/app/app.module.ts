@@ -11,6 +11,7 @@ let routes: Routes = [
   {path: 'home', component: HomeComponent  },
   {path: 'users', loadChildren: () => import('./modules/user/user.module').then(m=>m.UserModule)},
   {path: 'posts', loadChildren: () => import('./modules/post/post.module').then(m=>m.PostModule)},
+  {path: 'comments', loadChildren: () => import('./modules/comments/comment.module').then(m=>m.CommentModule)},
 
 
 
@@ -20,6 +21,7 @@ let routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+
 
   ],
   imports: [

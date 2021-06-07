@@ -1,0 +1,8 @@
+<div>
+  {{comment.id}}
+  {{comment.name}}
+  {{comment.email}}
+  {{comment.body}}
+
+  <button routerLink="{{comment.id}}" [state]="comment">Details</button>
+</div>

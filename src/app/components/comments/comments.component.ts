@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Comment} from "../../../models/comment";
+import {Comment} from "../../models/comment";
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',

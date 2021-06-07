@@ -11,13 +11,13 @@ import {PostsComponent} from './components/posts/posts.component';
 import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {PostComponent} from './components/post/post.component';
 import {PostDetailsComponent} from "./components/post-details/post-details.component";
-import {UsersDeactivatorService} from "../services/users-deactivator.service";
-import {PostActivatorService} from "../services/post-activator.service";
+import {UsersDeactivatorService} from "./services/users-deactivator.service";
+import {PostActivatorService} from "./services/post-activator.service";
 import {CommentsComponent} from './components/comments/comments.component';
-import {CommentsResolveService} from "../services/comments-resolve.service";
+import {CommentsResolveService} from "./services/comments-resolve.service";
 import {CommentComponent} from './components/comment/comment.component';
 import {CommentDetailsComponent} from './components/comment-details/comment-details.component';
-import {CommentService} from "../services/comment.service";
+import {CommentService} from "./services/comment.service";
 
 let routes: Routes = [
   {path: 'users',

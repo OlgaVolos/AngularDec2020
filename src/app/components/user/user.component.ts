@@ -18,8 +18,8 @@ id: number;
 
   }
 
-  GoToUser(): void {
-    this.router.navigate([this.user.id], {relativeTo: this.activatedRoute, state: this.user});
-
-  }
+  // GoToUser(): void {
+  //   this.router.navigate([this.user.id], {relativeTo: this.activatedRoute, state: this.user});
+  //
+  // } //якщо в user.component.html прописати state, то метод не потрібен
 }

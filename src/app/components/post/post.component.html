@@ -2,6 +2,6 @@
     {{post.id}}
     {{post.title}}
     {{post.body}}
-    <button [routerLink]="[post.id]">Details</button>
+    <button (click)="PostDetails()">Details</button>
     <hr>
   </div>

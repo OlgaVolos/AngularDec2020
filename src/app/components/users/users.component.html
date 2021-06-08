@@ -1,1 +1,8 @@
-<p>users works!</p>
+<div class="content">
+  <div class="userContent">
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  </div>
+  <div class="userContent">
+    <router-outlet></router-outlet>
+  </div>
+</div>

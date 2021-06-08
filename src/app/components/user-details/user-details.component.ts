@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {IUser} from "../../interfaces";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-user-details',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-
-  constructor() { }
+fullUser: IUser;
+id: number;
+  constructor(private router: Router, private activatedRoute: ActivatedRoute ) {
+    this.activatedRoute.params.subscribe(params =>{
+      this.fullUser = this.router.getCurrentNavigation()?.extras.state as IUser
+    })
+  }
 
   ngOnInit(): void {
   }

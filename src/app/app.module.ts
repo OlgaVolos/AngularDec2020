@@ -33,7 +33,7 @@ let routes: Routes = [
 
 
   ],
-  providers: [],
+  providers: [PostResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,7 +13,9 @@ import { UserComponent } from './components/user/user.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 let routes: Routes = [
-  {path: 'posts', component: PostsComponent, resolve: {xxx: PostResolveService}}
+  {path: 'posts', component: PostsComponent, resolve: {xxx: PostResolveService}, children: [
+      {path: ':id', component: PostDetailsComponent}
+    ]}
 ];
 
 @NgModule({

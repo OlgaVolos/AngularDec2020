@@ -1,6 +1,7 @@
 .content{
   display: flex;
+  justify-content: space-between;
 }
-.postContent{
-  width: 50%;
-}
+/*.postContent{*/
+/*  width: 40%;*/
+/*}*/

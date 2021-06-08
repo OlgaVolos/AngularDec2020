@@ -1,8 +1,0 @@
-<div>
- {{user.id}}
-  {{user.name}}
-  {{user.email}}
-  {{user.username}}
-<!--  <button (click)="GoToUser()">Details</button>-->
-  <button routerLink="{{user.id}}" [state]="user">Link to user</button>
-</div>

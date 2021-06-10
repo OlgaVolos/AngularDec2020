@@ -1,0 +1,12 @@
+<div>
+  <app-user *ngFor="let user of users" [user]="user" (userLift)="chosenUser($event)"  ></app-user>
+</div>
+
+<!--якщо ми далі прокидаємо, то треба ще один еміттер в юзерс і все переносимо  на app в app-users -->
+<!--якщо існує, можна замінити {{singleUser?.id}}-->
+<!--<div *ngIf="singleUser">-->
+<!--  {{singleUser.id}} {{singleUser.name}} {{singleUser.email}}-->
+<!--  <button (click)="login()">Login</button>-->
+<!--</div>  це переносимо в user-details, ми його будемо відображати на app в app-users-->
+
+

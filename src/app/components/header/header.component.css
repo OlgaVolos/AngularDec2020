@@ -1,0 +1,5 @@
+header{
+  background: pink;
+  display: flex;
+  justify-content: flex-end;
+}

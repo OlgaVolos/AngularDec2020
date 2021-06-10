@@ -14,7 +14,7 @@ export class UsersComponent implements OnInit {
 
   @Output()
 
-  userLift = new EventEmitter<User>();
+  userLift = new EventEmitter<User>(); // для прокидання на app в app-users. Щоб відобразити в user-details
 
 
   constructor(private userService: UserService) { }

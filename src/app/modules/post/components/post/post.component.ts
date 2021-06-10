@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 import {ActivatedRoute, Router} from "@angular/router";
-import {PostService} from "../../../../services/post.service";
 import {IPost} from "../../../../models";
 
 @Component({

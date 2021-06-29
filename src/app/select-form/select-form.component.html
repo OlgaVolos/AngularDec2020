@@ -1,0 +1,11 @@
+<form [formGroup]="myForm" (change)="save()">
+  <select [formControlName]="'id'">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+<!--  <button>save</button>-->
+</form>
+
+<!--без кнопки, микористовуємо change замість ngSubmit-->

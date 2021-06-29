@@ -1,0 +1,28 @@
+<form #myForm='ngForm' (ngSubmit)="submit(myForm)">
+  <div>
+  <input #lgn="ngModel" required [minlength]="3"   name="login" type="text" [(ngModel)]="user.login" >
+  <div *ngIf="lgn.errors?.required">required field</div>
+    <div *ngIf="lgn.errors?.minlength?.actualLength < lgn.errors?.minlength?.requiredLength ">
+      actual Length is {{lgn.errors?.minlength?.actualLength}}
+      required Length is {{lgn.errors?.minlength?.requiredLength}}
+    </div>
+  </div>
+
+  <div>
+  <input required name="password" type="text" [(ngModel)]="user.password" >
+  </div>
+  <button [disabled]="!myForm.valid" [class.error]="!myForm.valid" >save</button>
+</form>
+
+<!--[disabled]="!myForm.valid" або [disabled]="myForm.invalid" без required не працює-->
+<!-- name має бути обов"язково, по ньому ми можемо доступатися до інпута (controls)-->
+
+<!--#myForm - Template variables змінна, яка характеризує наш DOM - елемент, посилання на нього. #myForm зараз -->
+<!--посилається на нашу цілу форму. Такі змінні можна присвоювати кожному інпуту.-->
+<!--локальна  та доступна в лише в межах даної форми-->
+
+<!--за допомогою #... можна відхопити будь-який елемент в дом-структурі-->
+
+<!--Можна передавати як аргумент-->
+<!--[minlength] - без камел-кейсу!!!-->
+<!--[class.error]="true" вішається клас, який можна прив"язати до валідності-->

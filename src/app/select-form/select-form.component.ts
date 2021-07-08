@@ -18,6 +18,5 @@ export class SelectFormComponent implements OnInit {
 
   save() {
     console.log(this.myForm.controls.id.value)
-
   }
 }

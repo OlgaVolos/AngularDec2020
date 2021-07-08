@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" (ngSubmit)="addCar()" >
+  <div><label>Model: <input type="text" formControlName="model"></label></div>
+  <div *ngIf="error?.model">{{error?.model[0]}}</div>
+  <div><label>Price: <input type="text" formControlName="price"></label></div>
+  <div *ngIf="error?.price">{{error?.price[0]}}</div>
+  <div><label>Year: <input type="text" formControlName="year"></label></div>
+  <div *ngIf="error?.year">{{error?.year[0]}}</div>
+  <button>Save</button>
+</form>

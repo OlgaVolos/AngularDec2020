@@ -14,6 +14,7 @@ import { PostComponent } from './components/post/post/post.component';
 let routes: Routes = [
   {path: '', component: UsersComponent},
   {path: ':id', component: PostsComponent}
+//   З ДОЧІРНЬОЮ УРЛОЮ ПРОДУБЛЮЄ ІНПУТ!!!!!
 
 ];
 
